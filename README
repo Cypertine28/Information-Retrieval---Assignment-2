@@ -1,0 +1,89 @@
+CS 657a (information retrival) ----Assignment2
+-----------------------------------------------
+Name:- Akash G. Panzade
+Email id:- akashp21@iitk.ac.in
+-----------------------------------------------
+
+A) How to Run program using makefile.:--
+------------------------------------------------------
+To Run Makefile press "make" cmd in terminal:-
+example :- $make
+
+Dependencies:-
+This assignment needs following packages or libraries to be installed to run it.
+1.pandas
+2.numpy
+3.gensim
+4.os
+5.collections
+6.pickle
+7.matplotlib
+8.re
+
+
+
+B)Information for each question:---
+
+Question 1) :-
+-------------
+*** question 1 is in "Q1" folder which having py files and output.
+i. Q1 produce total 40 csv files (i.e each model produce 5 files for 50 dimention and 5 file for 100 dimention).This files store in "output" folder
+ii. To run Q1 you need to extract word similarity dataset in "Word similarity" folder and  pre-trained word vectors datasets into "hi" folder.
+iii. All output files of Q1 stored in "output" folder Format for output file names "Q1_ModelName_dimension_similarity_threshold.csv"
+iv. Accuracy appended at the end of each csv file.
+v. there are 4 ".py" for each model like "model.py"
+vi. Library used in this question are gensim.models,numpy,pandas,pickle
+----------------------------------------------------
+
+Question 2) :-
+--------------
+*** Question 2 is in "Q2" folder which having all py files and output
+i. "Preprocesssing.py" files help to preprocess given train and dev file which converted into .csv file names as  "ner_csv_train.csv" and "ner_csv_test.csv" which contain two columns ("sentence" and "label").
+ii. This csv files used in further training and testing of model.
+
+
+----------------------------------------------------
+
+Question 3 :-
+--------------
+*** Question 3 is in "Q3" folder which having all py files and output
+i. there are mainly two folder containing output are "top 100 ngram output"(to store each files containing top 100 ngram) and "output_graphs"(which store output graphs).
+ii. Folder "q3d_files" contain all pickle files for character ,word, syllable , which can used for fetching top 100 ngrams.
+iii.For Q3 a, Q3 b ,Q3 c output txt files generated using pickle files which store top 100 ngram for charaters ,word and syllables.Here ngram represents one of unigram, bigram, trigram or quadgram (in case of characters) and type represents whether it is for characters, words or syllables.
+name of files like:--- "Top 100 ngram type.txt"
+example:-"Top 100 unigram character.txt" or "Top 100 unigram syllable.txt" or "Top 100 unigram word.txt"
+ 
+iv. For  "d" part of the question 3, the output files are stored as "ngram_type.jpg" in "output_graphs" . These files contain the plot of frequency versus rank for the given ngram and the type in the form of a "jpg" image. From all plots, it is found that the grpah follows the Zipfian distribution to a certain extent.
+
+v. a,b and c parts of Q3 question, the code files are given as "Q3_A.py", "Q3_B.py" and "Q3_C.py". Since the dataset required to solve this problem is huge. For this corpus is divided into 127 files and unigram/bigram/trigram/quadgram for word is calculated on some set of files each time. this done on all files which gives output in pickle which further helps to calculate top 100 ngram for character,word,syllable.
+To split data cmd used as follows:
+    $split -l 100000 hi.txt
+this will split file into 127 files.
+
+vi. Q3.py files helps to generate all top 100 ngram for character, words, syllable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
